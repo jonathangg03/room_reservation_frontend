@@ -1,11 +1,11 @@
 import css from 'styled-jsx/css'
+import { colors } from '../../theme'
 
 const styles = css`
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
   }
 
   ul {
@@ -14,12 +14,12 @@ const styles = css`
   }
 
   li {
-    margin: 0 25px;
+    margin: 0 15px;
   }
 
   button {
     padding: 13px 20px;
-    background-color: #3a11af;
+    background-color: ${colors.main};
     color: white;
     border: none;
     font-size: 15px;
