@@ -1,8 +1,13 @@
 import Image from 'next/image'
 import styles from './styles'
 import Logo from '../../public/Logo.png'
+import signInWithPopup from '../../lib/firebaseAuth'
 
 const LOGGED = true
+
+const handleSignIn = async () => {
+  await signInWithPopup()
+}
 
 const Header = () => (
   <>
@@ -11,7 +16,7 @@ const Header = () => (
       <nav>
         <ul>
           <li>
-            <button>Ingresar</button>
+            <button onClick={handleSignIn}>Ingresar</button>
           </li>
           <li>
             <button>Ver disponibilidad</button>
