@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import styles from './styles'
 import Logo from '../../public/Logo.png'
-import signInWithPopup from '../../lib/firebaseAuth'
+import { signInWithRedirect } from 'firebase/auth'
+import auth from '../../lib/firebaseAuth'
 
 const LOGGED = true
 
-const handleSignIn = async () => {
-  await signInWithPopup()
+const handleSignIn = () => {
+  signInWithRedirect(auth)
 }
 
 const Header = () => (
