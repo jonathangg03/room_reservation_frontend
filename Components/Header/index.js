@@ -1,4 +1,6 @@
+import { useContext } from 'react'
 import Image from 'next/image'
+import { context } from '../../Context/userContext'
 import styles from './styles'
 import Logo from '../../public/Logo.png'
 import { signInWithGoogle } from '../../lib/firebaseAuth'
@@ -7,13 +9,11 @@ import { useEffect, useState } from 'react'
 
 const LOGGED = true
 
-
 const Header = () => {
-  const [userData, setUserData] = useState({})
-
+  const [setUser, user] = useContext(context)
   useEffect(() => {
     auth.onAuthStateChanged(user => {
-      setUserData(user)
+      setUser(user)
       console.log(user)
     })
   }, [])
@@ -30,6 +30,9 @@ const Header = () => {
             <li>
               <button>Ver disponibilidad</button>
             </li>
+            {
+              user && <p>{'Hola'}</p>
+            }
           </ul>
         </nav>
       </header>
