@@ -11,11 +11,15 @@ const LOGGED = true
 
 const Header = () => {
   const [setUser, user] = useContext(context)
+
   useEffect(() => {
-    auth.onAuthStateChanged(user => {
-      setUser(user)
-      console.log(user)
-    })
+    if (setUser) {
+      auth.onAuthStateChanged(user => {
+        console.log(setUser)
+        setUser(user)
+        console.log(user)
+      })
+    }
   }, [])
 
   return (
