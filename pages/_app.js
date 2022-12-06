@@ -1,8 +1,8 @@
 import '../styles/globals.css'
-import { contextProvider } from '../Context/userContext'
+import { ContextProvider } from '../Context/userContext'
 
 function MyApp({ Component, pageProps }) {
-  return <contextProvider><Component {...pageProps} /></contextProvider>
+  return <ContextProvider><Component {...pageProps} /></ContextProvider>
 }
 
 export default MyApp

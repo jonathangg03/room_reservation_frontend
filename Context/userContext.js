@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 const context = createContext([])
 
-const contextProvider = ({ children }) => {
+const ContextProvider = ({ children }) => {
   const [user, setUser] = useState({})
 
   return (
@@ -12,4 +12,4 @@ const contextProvider = ({ children }) => {
   )
 }
 
-export { context, contextProvider }
+export { context, ContextProvider }
