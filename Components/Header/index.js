@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { context } from '../../Context/userContext'
 import styles from './styles'
 import Logo from '../../public/Logo.png'
-import { signInWithGoogle } from '../../lib/firebaseAuth'
+import { signInWithGoogle, logOut } from '../../lib/firebaseAuth'
 import { auth } from '../../lib/firebaseAuth'
 import { useEffect, useState } from 'react'
 
@@ -22,6 +22,10 @@ const Header = () => {
     }
   }, [setUser])
 
+  const handleSignOut = async () => {
+    await logOut()
+  }
+
   return (
     <>
       <header>
@@ -36,9 +40,15 @@ const Header = () => {
             }
             {
               user &&
-              <li>
-                <button>Ver disponibilidad</button>
-              </li>
+              <>
+                <li>
+                  <button>Ver disponibilidad</button>
+                </li>
+                <li>
+                  <button onClick={handleSignOut}>Cerrar sesión</button>
+                </li>
+              </>
+
             }
 
           </ul>
