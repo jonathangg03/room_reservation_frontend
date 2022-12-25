@@ -7,12 +7,11 @@ import { useEffect, useState } from 'react'
 
 const LOGGED = true
 
-
 const Header = () => {
   const [userData, setUserData] = useState({})
 
   useEffect(() => {
-    auth.onAuthStateChanged(user => {
+    auth.onAuthStateChanged((user) => {
       setUserData(user)
       console.log(user)
     })
@@ -37,4 +36,5 @@ const Header = () => {
     </>
   )
 }
+
 export default Header
