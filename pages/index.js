@@ -6,6 +6,13 @@ export default function Home() {
     <div>
       <Header />
       <Installations />
+      <style jsx>
+        {`
+          div {
+            position: relative;
+          }
+        `}
+      </style>
     </div>
   )
 }

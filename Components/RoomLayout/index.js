@@ -1,12 +1,10 @@
-import styles from "./styles"
+import styles from './styles'
 
-const RoomLayout = ({ children }) => {
+const RoomLayout = ({ children, width, height }) => {
   return (
     <>
-      <div>
-        <div className="room-Layout__container">
-          {children}
-        </div>
+      <div width={width} heigth={height}>
+        <div className='room-Layout__container'>{children}</div>
       </div>
       <style jsx>{styles}</style>
     </>

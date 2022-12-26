@@ -4,9 +4,8 @@ import { outline } from '../../theme'
 const styles = css`
   section {
     outline: ${outline};
-    background-color: white;
-    width: 150px;
-    height: 150px;
+    width: 330px;
+    height: 200px;
   }
 `
 
