@@ -1,3 +1,4 @@
+import Irazu from '../Irazu'
 import styles from './styles'
 
 const Installations = () => {
@@ -8,6 +9,7 @@ const Installations = () => {
           <p>Entrada</p>
         </div>
       </section>
+      <Irazu />
       <style jsx>{styles}</style>
     </>
   )

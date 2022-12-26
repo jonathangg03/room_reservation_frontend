@@ -12,3 +12,5 @@ const RoomLayout = ({ children }) => {
     </>
   )
 }
+
+export default RoomLayout
